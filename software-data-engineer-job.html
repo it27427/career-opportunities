@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Software and Data Engineer opportunity at the University of Maryland in College Park, Maryland. Salary: $113,440–$136,128 per year.">
+  <meta name="robots" content="index,follow">
+  <title>Software and Data Engineer | University of Maryland</title>
+  <style>
+    :root {
+      --navy: #10243a;
+      --blue: #1459a6;
+      --blue-dark: #0e417c;
+      --gold: #f2b84b;
+      --ink: #202b38;
+      --muted: #5b6877;
+      --line: #e0e7ef;
+      --soft: #f4f7fb;
+      --white: #ffffff;
+      --green: #137547;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f2f5f9;
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+      overflow-wrap: anywhere;
+    }
+
+    a {
+      color: var(--blue);
+    }
+
+    .topbar {
+      background: var(--navy);
+      color: var(--white);
+      padding: 12px 18px;
+    }
+
+    .topbar-inner,
+    .container {
+      width: min(100% - 32px, 980px);
+      margin: 0 auto;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: .3px;
+      font-size: 18px;
+    }
+
+    .brand span {
+      color: var(--gold);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #10243a, #194c7f);
+      color: white;
+      padding: 42px 0 36px;
+      border-bottom: 5px solid var(--gold);
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #dbe8f7;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      line-height: 1.15;
+      margin: 10px 0 12px;
+    }
+
+    .employer {
+      font-size: 19px;
+      font-weight: 700;
+      margin: 0 0 8px;
+    }
+
+    .hero-location {
+      margin: 0;
+      color: #e5edf7;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: 800;
+      text-decoration: none;
+      text-align: center;
+      transition: transform .15s ease, background .15s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #172638;
+    }
+
+    .btn-secondary {
+      border: 1px solid #b9cce2;
+      color: white;
+    }
+
+    .container {
+      padding-top: 24px;
+      padding-bottom: 44px;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 22px;
+    }
+
+    .summary-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .summary-card .label {
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: .8px;
+      font-weight: 800;
+    }
+
+    .summary-card .value {
+      display: block;
+      font-weight: 800;
+      font-size: 16px;
+      margin-top: 5px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 270px;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .content-card,
+    .side-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      color: var(--navy);
+      font-size: 23px;
+      line-height: 1.3;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      color: var(--navy);
+      font-size: 17px;
+      margin: 22px 0 8px;
+    }
+
+    p {
+      margin: 0 0 13px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 8px 0 16px;
+    }
+
+    li {
+      padding-left: 2px;
+      margin: 7px 0;
+    }
+
+    .notice {
+      border-left: 4px solid var(--gold);
+      background: #fff8e9;
+      padding: 14px 16px;
+      border-radius: 6px;
+      margin-top: 14px;
+    }
+
+    .ad-slot {
+      border: 1px dashed #aab7c7;
+      border-radius: 10px;
+      background: #f8fafc;
+      min-height: 90px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #697788;
+      font-size: 12px;
+      margin: 18px 0;
+    }
+
+    .ad-slot strong {
+      color: #586779;
+      margin-bottom: 3px;
+    }
+
+    .side-card h2 {
+      font-size: 18px;
+    }
+
+    .fact {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fact:last-child {
+      border-bottom: 0;
+    }
+
+    .fact b {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .5px;
+    }
+
+    .fact span {
+      display: block;
+      margin-top: 3px;
+      font-weight: 700;
+    }
+
+    .apply-box {
+      background: var(--soft);
+      border-radius: 10px;
+      padding: 16px;
+    }
+
+    .apply-box .btn {
+      width: 100%;
+      background: var(--blue);
+      color: white;
+    }
+
+    .apply-box .btn:hover {
+      background: var(--blue-dark);
+    }
+
+    .small {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    footer {
+      background: var(--navy);
+      color: #e4ebf3;
+      padding: 22px 16px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer a {
+      color: #ffcf70;
+    }
+
+    @media (max-width: 760px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-card {
+        padding: 13px 15px;
+      }
+
+      .hero {
+        padding: 32px 0 28px;
+      }
+
+      .content-card,
+      .side-card {
+        padding: 18px;
+      }
+
+      .side-column {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 420px) {
+
+      .topbar-inner,
+      .container {
+        width: min(100% - 22px, 980px);
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+    }
+  </style>
+
+  <script data-cfasync="false" src="https://abscloud.org/1/14273fbc52ae5541eccc782de79227c8"></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">CAREER<span> OPPORTUNITIES</span></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="topbar-inner">
+      <div class="eyebrow">Featured job opportunity</div>
+      <h1>Software and Data Engineer</h1>
+      <p class="employer">University of Maryland · Division of Information Technology (DIT)</p>
+      <p class="hero-location">4321 Hartwick Road, College Park, MD 20740</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary"
+          href="https://www.indeed.com/viewjob?jk=486b6db73bacdcdf&amp;from=career-explorer-jobs-card" target="_blank"
+          rel="noopener noreferrer">Apply Now on Indeed ↗</a>
+        <a class="btn btn-secondary" href="#job-details">Read Full Job Details</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="summary-grid" aria-label="Job summary">
+      <div class="summary-card"><span class="label">Salary</span><span class="value">$113,440–$136,128 / year</span>
+      </div>
+      <div class="summary-card"><span class="label">Employment</span><span class="value">Full-time · Staff
+          Regular</span></div>
+      <div class="summary-card"><span class="label">Best consideration date</span><span class="value">October 21,
+          2026</span></div>
+    </section>
+
+    <!-- ADSTERRA AD SLOT 1: Replace this placeholder with your Adsterra ad code if your publishing platform permits it. -->
+    <div class="ad-slot" aria-label="Advertisement placement">
+      <script>
+        atOptions = {
+          'key': '750f93df60e6154d4cc5a8ed1cb55bcc',
+          'format': 'iframe',
+          'height': 90,
+          'width': 728,
+          'params': {}
+        };
+      </script>
+      <script src="https://bauval.org/22/750f93df60e6154d4cc5a8ed1cb55bcc"></script>
+    </div>
+
+    <div class="layout">
+      <div class="main-column">
+        <section class="content-card" id="job-details">
+          <h2>Job Overview</h2>
+          <p>This Software and Data Engineer position is available within the University of Maryland’s Division of
+            Information Technology (DIT), in the Mid-Atlantic Crossroads (MAX) department.</p>
+          <p>The role works closely with network engineers and global DNS root operators to develop and support
+            software, network management, service support, and infrastructure that improve the productivity and
+            reliability of the MAX network and support DNS “D” root services.</p>
+
+          <h3>Key Responsibilities</h3>
+          <ul>
+            <li>Design, plan, and implement well-engineered software, network management, and service-support solutions.
+            </li>
+            <li>Support documentation and existing C-language code.</li>
+            <li>Support and expand the DNS root server “D” in collaboration with global root operators.</li>
+            <li>Establish standard, repeatable solutions for common software and data requirements.</li>
+            <li>Work regularly with network engineers to build software utilities and tools that improve network
+              productivity and reliability.</li>
+            <li>Participate in conference calls, email discussions, and operations meetings with DNS root operators.
+            </li>
+            <li>Discuss and help reconcile disruptions in the global DNS environment.</li>
+            <li>Assist with support of the MAX server environment that supports the MAX network.</li>
+          </ul>
+
+          <h3>Minimum Qualifications</h3>
+          <p><strong>Education:</strong> Bachelor’s degree from an accredited college or university.</p>
+          <p><strong>Experience:</strong> Three (3) years of professional experience in network design, research,
+            implementation, and escalation support.</p>
+          <p><strong>Education substitution:</strong> Additional work experience as defined above may be substituted
+            year-for-year for up to four (4) years of the required education.</p>
+
+          <h3>Knowledge, Skills, and Abilities</h3>
+          <ul>
+            <li>Knowledge of core network design and implementation over WAN.</li>
+            <li>Knowledge of scalable networks.</li>
+            <li>Oral and written communication skills.</li>
+            <li>Skill in using Google Workspace.</li>
+            <li>Ability to interpret and apply policies, procedures, regulations, and laws.</li>
+            <li>Ability to multitask while maintaining a commitment to customer service.</li>
+          </ul>
+
+          <h3>Preferred Qualifications</h3>
+          <ul>
+            <li>Extensive knowledge of DNS.</li>
+            <li>Ability to support existing C-language code.</li>
+            <li>Server management support experience.</li>
+            <li>Ciena and Cisco networking experience.</li>
+            <li>Knowledge of fiber optics, outside plant (OSP), and fiber-optic testing using OTDR.</li>
+          </ul>
+
+          <h3>Work Schedule and Physical Requirements</h3>
+          <ul>
+            <li>This position has an in-person component, with expected weekly attendance at the College Park, Maryland
+              location. Telework is not guaranteed.</li>
+            <li>Evening, night, weekend, or different-shift work may be required for extended periods.</li>
+            <li>Weekends and evenings may be needed based on operational requirements.</li>
+            <li>Occasional racking and stacking of servers and network equipment is required, with a maximum lifting
+              limit of 50 pounds.</li>
+            <li>Must be able to walk short distances and drive a state vehicle.</li>
+            <li>A valid driver’s license is required to operate a state vehicle.</li>
+          </ul>
+
+          <div class="notice"><strong>Essential position:</strong> During a major catastrophic event, weather emergency,
+            or other operational emergency, the employee may be required to work at the normal work location or an
+            alternative location to help maintain continuity of University services.</div>
+        </section>
+
+        <!-- ADSTERRA AD SLOT 2: Replace this placeholder with your Adsterra ad code if your publishing platform permits it. -->
+        <div class="ad-slot" aria-label="Advertisement placement">
+          <script async="async" data-cfasync="false"
+            src="https://bauval.org/21/40937f07c1ddc56e91b37f5d447164f9"></script>
+          <div id="container-40937f07c1ddc56e91b37f5d447164f9"></div>
+        </div>
+
+        <section class="content-card">
+          <h2>Visa Sponsorship and Employment Eligibility</h2>
+          <p><strong>Visa sponsorship:</strong> The Division of Information Technology will not sponsor the successful
+            candidate for U.S. work authorization now or in the future. F-1 STEM OPT support is not available for this
+            position.</p>
+          <p><strong>Employment eligibility:</strong> The successful candidate must complete Form I-9 employment
+            eligibility verification by presenting documents establishing identity and work authorization within the
+            required federal timeframe. Where applicable, renewed work authorization must also be demonstrated.</p>
+          <p>Failure to complete employment eligibility verification or reverification within the required timeframe may
+            result in suspension or termination of employment.</p>
+        </section>
+
+        <section class="content-card">
+          <h2>Application Requirements</h2>
+          <p><strong>Required application materials:</strong> Applications missing any of the following materials will
+            not be considered.</p>
+          <ul>
+            <li>Resume</li>
+            <li>Cover letter</li>
+            <li>List of three references</li>
+          </ul>
+          <p><strong>Best consideration date:</strong> October 21, 2026</p>
+          <p><strong>Posting close date:</strong> Not specified</p>
+          <p><strong>Open until filled:</strong> Yes</p>
+          <div class="apply-box">
+            <p><strong>Interested in this opportunity?</strong></p>
+            <p>Review the official application details and submit your application through the linked Indeed job
+              listing.</p>
+            <a class="btn" href="https://www.indeed.com/viewjob?jk=486b6db73bacdcdf&amp;from=career-explorer-jobs-card"
+              target="_blank" rel="noopener noreferrer">Apply Now ↗</a>
+            <p class="small" style="margin:10px 0 0;">Application link opens in a new tab.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="side-column">
+        <section class="side-card">
+          <h2>Job at a Glance</h2>
+          <div class="fact"><b>Employer</b><span>University of Maryland</span></div>
+          <div class="fact"><b>Department</b><span>DIT – ATI – Mid-Atlantic Crossroads (MAX)</span></div>
+          <div class="fact"><b>Job title</b><span>Software and Data Engineer</span></div>
+          <div class="fact"><b>Salary range</b><span>$113,440–$136,128 annually</span></div>
+          <div class="fact"><b>Job type</b><span>Full-time</span></div>
+          <div class="fact"><b>Worker subtype</b><span>Staff Regular</span></div>
+          <div class="fact"><b>Location</b><span>4321 Hartwick Road, College Park, MD 20740</span></div>
+          <div class="fact"><b>Financial disclosure</b><span>Not required</span></div>
+          <div class="fact"><b>Job risks</b><span>Not applicable to this position</span></div>
+        </section>
+
+        <!-- ADSTERRA SIDEBAR SLOT: Replace this placeholder with your Adsterra ad code if your publishing platform permits it. -->
+        <div class="ad-slot" style="min-height:250px" aria-label="Advertisement placement">
+          <script>
+            atOptions = {
+              'key': 'bf02d4746919826898f279265026b54a',
+              'format': 'iframe',
+              'height': 250,
+              'width': 300,
+              'params': {}
+            };
+          </script>
+          <script src="https://bauval.org/22/bf02d4746919826898f279265026b54a"></script>
+        </div>
+
+        <section class="side-card">
+          <h2>Background Check</h2>
+          <p>The employment offer is contingent on completion of a background check. Reported information will not
+            automatically disqualify a candidate. Before an adverse decision, a finalist will have an opportunity to
+            provide relevant information to the University.</p>
+          <p>The University may rescind an offer or decline or terminate employment if the results are deemed
+            incompatible with the position, regardless of when the check is completed.</p>
+        </section>
+      </aside>
+    </div>
+
+    <section class="content-card">
+      <h2>Additional University Notices</h2>
+      <h3>Equal Employment Opportunity</h3>
+      <p>The University of Maryland, College Park is an Equal Opportunity Employer. All qualified applicants will
+        receive equal consideration for employment.</p>
+      <h3>Title IX</h3>
+      <p>Applicants may review the University’s Title IX Non-Discrimination Notice and related resources through the
+        University’s official website.</p>
+      <h3>Additional Information</h3>
+      <p>Some positions may not be advertised on the University career site when recruitment is managed by a search
+        firm. This posting lists the job details supplied for this opportunity.</p>
+    </section>
+
+    <p class="small">Job information is presented for informational purposes. Details may change; verify current
+      requirements, deadlines, and application instructions on the employer or linked application website before
+      applying.</p>
+  </main>
+
+  <footer>
+    <p>Job opportunity information · Always confirm details with the employer or official application listing.</p>
+    <p><a href="https://www.indeed.com/viewjob?jk=486b6db73bacdcdf&amp;from=career-explorer-jobs-card" target="_blank"
+        rel="noopener noreferrer">View job and apply ↗</a></p>
+  </footer>
+
+  <script data-cfasync="false" src="https://bauval.org/14/1ec8d84283f64a0a0d0c4030cdb08bc2"></script>
+</body>
+
+</html>
